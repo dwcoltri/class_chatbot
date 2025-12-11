@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Multi-Persona</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Chatbot</h1>
+            <p class="subtitle">Chat with different AI personas</p>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>Choose Persona</h2>
+                <div id="persona-list" class="persona-list">
+                    <!-- Personas will be loaded dynamically -->
+                </div>
+                <button id="clear-btn" class="clear-btn">Clear Chat</button>
+            </div>
+
+            <div class="chat-container">
+                <div class="current-persona">
+                    <span>Current Persona: <strong id="current-persona-name">Default Assistant</strong></span>
+                </div>
+                
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <strong>Assistant:</strong> Hello! I'm your AI assistant. Choose a persona from the sidebar to get started, then type your message below!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <textarea 
+                        id="user-input" 
+                        placeholder="Type your message here..." 
+                        rows="3"
+                    ></textarea>
+                    <button id="send-btn" class="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

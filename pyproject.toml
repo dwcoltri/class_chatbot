@@ -1,0 +1,14 @@
+[project]
+name = "ai-chatbot"
+version = "1.0.0"
+description = "AI chatbot with multiple personas using Google Gemini"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.0.0",
+    "google-generativeai>=0.3.2",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+chatbot = "app:app"
+
